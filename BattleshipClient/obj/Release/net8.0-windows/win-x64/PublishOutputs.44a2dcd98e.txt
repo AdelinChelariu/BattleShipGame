@@ -1,0 +1,7 @@
+C:\Users\Adelin\Desktop\pfft\ANIV\SemII\SPRC\BattleshipGame\BattleshipGame\BattleshipClient\bin\Release\net8.0-windows\win-x64\publish\BattleshipClient.exe
+C:\Users\Adelin\Desktop\pfft\ANIV\SemII\SPRC\BattleshipGame\BattleshipGame\BattleshipClient\bin\Release\net8.0-windows\win-x64\publish\BattleshipClient.dll
+C:\Users\Adelin\Desktop\pfft\ANIV\SemII\SPRC\BattleshipGame\BattleshipGame\BattleshipClient\bin\Release\net8.0-windows\win-x64\publish\BattleshipClient.deps.json
+C:\Users\Adelin\Desktop\pfft\ANIV\SemII\SPRC\BattleshipGame\BattleshipGame\BattleshipClient\bin\Release\net8.0-windows\win-x64\publish\BattleshipClient.runtimeconfig.json
+C:\Users\Adelin\Desktop\pfft\ANIV\SemII\SPRC\BattleshipGame\BattleshipGame\BattleshipClient\bin\Release\net8.0-windows\win-x64\publish\BattleshipClient.pdb
+C:\Users\Adelin\Desktop\pfft\ANIV\SemII\SPRC\BattleshipGame\BattleshipGame\BattleshipClient\bin\Release\net8.0-windows\win-x64\publish\Shared.dll
+C:\Users\Adelin\Desktop\pfft\ANIV\SemII\SPRC\BattleshipGame\BattleshipGame\BattleshipClient\bin\Release\net8.0-windows\win-x64\publish\Shared.pdb

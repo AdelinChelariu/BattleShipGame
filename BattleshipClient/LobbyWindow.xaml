@@ -1,0 +1,186 @@
+<Window x:Class="BattleshipClient.LobbyWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Battleship — Lobby"
+        Width="680" Height="580"
+        MinWidth="520" MinHeight="420"
+        WindowStartupLocation="CenterScreen"
+        Background="{StaticResource BrushBackground}"
+        Closing="Window_Closing">
+
+    <Grid Margin="24">
+        <Grid.RowDefinitions>
+            <!-- Titlu -->
+            <RowDefinition Height="Auto"/>
+            <!-- Gap -->
+            <RowDefinition Height="12"/>
+            <!-- Bun venit -->
+            <RowDefinition Height="Auto"/>
+            <!-- Gap -->
+            <RowDefinition Height="14"/>
+            <!-- Conținut principal (lista + chat) -->
+            <RowDefinition Height="*"/>
+            <!-- Gap -->
+            <RowDefinition Height="10"/>
+            <!-- Panoul de provocare primită -->
+            <RowDefinition Height="Auto"/>
+            <!-- Gap -->
+            <RowDefinition Height="8"/>
+            <!-- Status -->
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- ── Titlu ── -->
+        <TextBlock Grid.Row="0"
+                   Text="⚓ BATTLESHIP — LOBBY"
+                   FontSize="22" FontWeight="Bold"
+                   Foreground="{StaticResource BrushHighlight}"
+                   HorizontalAlignment="Center"/>
+
+        <!-- ── Bun venit ── -->
+        <TextBlock Grid.Row="2"
+                   x:Name="TxtWelcome"
+                   FontSize="13"
+                   Foreground="{StaticResource BrushText}"
+                   HorizontalAlignment="Center"/>
+
+        <!-- ── Conținut principal ── -->
+        <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <!-- Lista jucătorilor -->
+                <ColumnDefinition Width="210"/>
+                <!-- Separator -->
+                <ColumnDefinition Width="16"/>
+                <!-- Chat -->
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- ── Coloana stânga: jucători ── -->
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="8"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="0"
+                           x:Name="TxtPlayersHeader"
+                           Text="Jucători online (0):"
+                           FontSize="12" FontWeight="SemiBold"
+                           Foreground="{StaticResource BrushTextDim}"/>
+
+                <ScrollViewer Grid.Row="2"
+                              VerticalScrollBarVisibility="Auto">
+                    <ItemsControl x:Name="PlayersList">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                    </ItemsControl>
+                </ScrollViewer>
+            </Grid>
+
+            <!-- ── Linie verticală separator ── -->
+            <Rectangle Grid.Column="1"
+                       Width="1"
+                       HorizontalAlignment="Center"
+                       Fill="#1E3250"/>
+
+            <!-- ── Coloana dreapta: chat ── -->
+            <Grid Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="8"/>
+                    <!-- Zona de mesaje -->
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="8"/>
+                    <!-- Input chat -->
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="0"
+                           Text="Chat lobby:"
+                           FontSize="12" FontWeight="SemiBold"
+                           Foreground="{StaticResource BrushTextDim}"/>
+
+                <!-- Zona mesaje -->
+                <Border Grid.Row="2"
+                        Background="#0D1E33"
+                        CornerRadius="4"
+                        Padding="8">
+                    <ScrollViewer x:Name="ChatScroll"
+                                  VerticalScrollBarVisibility="Auto"
+                                  HorizontalScrollBarVisibility="Disabled">
+                        <StackPanel x:Name="ChatMessages"/>
+                    </ScrollViewer>
+                </Border>
+
+                <!-- Input + buton trimite -->
+                <Grid Grid.Row="4">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="8"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBox Grid.Column="0"
+                             x:Name="TxtChatInput"
+                             Style="{StaticResource DarkTextBox}"
+                             VerticalContentAlignment="Center"
+                             MaxLength="200"
+                             KeyDown="TxtChatInput_KeyDown"/>
+
+                    <Button Grid.Column="2"
+                            Content="Trimite"
+                            Style="{StaticResource SecondaryButton}"
+                            Padding="12,6"
+                            Click="BtnSendChat_Click"/>
+                </Grid>
+            </Grid>
+        </Grid>
+
+        <!-- ── Panoul de provocare primită ── -->
+        <Border Grid.Row="6"
+                x:Name="ChallengePanel"
+                Visibility="Collapsed"
+                Background="#1A2A44"
+                CornerRadius="5"
+                Padding="12,8">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="8"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Column="0"
+                           x:Name="TxtChallengedBy"
+                           FontSize="13"
+                           Foreground="{StaticResource BrushText}"
+                           VerticalAlignment="Center"/>
+
+                <Button Grid.Column="1"
+                        Content="Acceptă"
+                        Style="{StaticResource PrimaryButton}"
+                        Padding="12,5"
+                        Click="BtnAccept_Click"/>
+
+                <Button Grid.Column="3"
+                        Content="Respinge"
+                        Style="{StaticResource SecondaryButton}"
+                        Padding="12,5"
+                        Click="BtnDecline_Click"/>
+            </Grid>
+        </Border>
+
+        <!-- ── Status ── -->
+        <TextBlock Grid.Row="8"
+                   x:Name="TxtStatus"
+                   FontSize="11"
+                   Foreground="{StaticResource BrushTextDim}"
+                   HorizontalAlignment="Center"
+                   TextWrapping="Wrap"/>
+    </Grid>
+</Window>

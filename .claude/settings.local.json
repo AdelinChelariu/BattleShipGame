@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dotnet build *)",
+      "Bash(Select-String -Pattern \"\\(error|warning|succeeded|failed\\)\")",
+      "Bash(Select-Object -Last 10)",
+      "Read(//c/Users/Adelin/AppData/Roaming/Claude/local-agent-mode-sessions/skills-plugin/ca4cb5b7-d443-4482-b1d5-17e49f6503bd/92103d8c-75c9-4d86-bb84-9443d21ff914/skills/docx/**)",
+      "Bash(npm list *)",
+      "Bash(node -e \"require\\('docx'\\); console.log\\('docx ok'\\);\")",
+      "Bash(npm install *)",
+      "Bash(node -e \"const d=require\\('docx'\\); console.log\\('ok', Object.keys\\(d\\).slice\\(0,5\\)\\)\")",
+      "Bash(NODE_PATH=\"C:/Users/Adelin/AppData/Roaming/npm/node_modules\" node gen_doc.js)",
+      "Bash(NODE_PATH=\"C:/Users/Adelin/AppData/Roaming/npm/node_modules\" python scripts/office/validate.py \"C:\\\\Users\\\\Adelin\\\\Desktop\\\\pfft\\\\ANIV\\\\SemII\\\\SPRC\\\\BattleshipGame\\\\BattleshipGame\\\\Documentatie_BattleshipGame.docx\")",
+      "Bash(python -c ' *)"
+    ]
+  }
+}

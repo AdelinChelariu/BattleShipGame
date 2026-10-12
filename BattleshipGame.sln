@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{F808D3CD-F367-4915-916F-BE63C3D6659F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BattleshipServer", "BattleshipServer\BattleshipServer.csproj", "{57CD9453-5392-42CA-9CA2-561439C575BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BattleshipClient", "BattleshipClient\BattleshipClient.csproj", "{7DC719FF-F40B-488F-BACF-87028B9D3324}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F808D3CD-F367-4915-916F-BE63C3D6659F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F808D3CD-F367-4915-916F-BE63C3D6659F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F808D3CD-F367-4915-916F-BE63C3D6659F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F808D3CD-F367-4915-916F-BE63C3D6659F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57CD9453-5392-42CA-9CA2-561439C575BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57CD9453-5392-42CA-9CA2-561439C575BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57CD9453-5392-42CA-9CA2-561439C575BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57CD9453-5392-42CA-9CA2-561439C575BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DC719FF-F40B-488F-BACF-87028B9D3324}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DC719FF-F40B-488F-BACF-87028B9D3324}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DC719FF-F40B-488F-BACF-87028B9D3324}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DC719FF-F40B-488F-BACF-87028B9D3324}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
